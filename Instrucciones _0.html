@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>¡Instrucciones!</title>
+
+
+      <!--Estilos -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+<!-- Jquery -->
+    <script src="bootstrap/bootstrap2/jquery.min.js"></script>
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap2/bootstrap/3.4.1/bootstrap.min.css">
+    <script src="bootstrap/bootstrap2/bootstrap/3.4.1/bootstrap.min.js"></script>
+
+  		<!--Estilos -->
+
+    <script type="text/javascript">
+      var pantalla_instruccion = 1;
+      var total_instrucciones = 3;
+
+        function btn_onmouseover(btn) {
+         
+          var imagen = "assets/btn/"+btn.id+"_hover.png"
+          btn.src=imagen;
+          //btn.style.width = '200px';
+        }
+
+        function btn_onmouseout(btn) {
+          
+          var imagen = "assets/btn/"+btn.id+".png"
+          btn.src=imagen;
+        }
+
+        function btn_onmousedown(btn) {
+          
+          var imagen = "assets/btn/"+btn.id+"_press.png"
+          btn.src=imagen;
+        }
+
+
+        function inicio(){
+          if(pantalla_instruccion<=1){
+              document.getElementById("back").onmouseover = false;
+              document.getElementById("back").onmouseout = false;
+              document.getElementById("back").onmousedown = false;
+              document.getElementById("back").onmouseup = false;
+              document.getElementById("back").src="assets/btn/back_press.png";
+
+          }
+          else if (pantalla_instruccion>=total_instrucciones) {
+              document.getElementById("next").onmouseover = false;
+              document.getElementById("next").onmouseout = false;
+              document.getElementById("next").onmousedown = false;
+              document.getElementById("next").onmouseup = false;
+              document.getElementById("next").src="assets/btn/next_press.png";
+          }
+          else{
+              
+              document.getElementById("next").src="assets/btn/next.png";              
+              document.getElementById("back").src="assets/btn/back.png";
+
+               document.getElementById("back").onmouseover = function(){btn_onmouseover(this);};
+              document.getElementById("back").onmouseout = function(){btn_onmouseout(this);};
+              document.getElementById("back").onmousedown = function(){btn_onmousedown(this);};
+              document.getElementById("back").onmouseup = function(){btn_onmouseup(this);};
+               document.getElementById("next").onmouseover = function(){btn_onmouseover(this);};
+              document.getElementById("next").onmouseout = function(){btn_onmouseout(this);};
+              document.getElementById("next").onmousedown = function(){btn_onmousedown(this);};
+              document.getElementById("next").onmouseup = function(){btn_onmouseup(this);};
+          
+          }
+        }
+
+        function reiniciar(){
+             document.getElementById("next").src="assets/btn/next.png";  
+             document.getElementById("next").onmouseover = function(){btn_onmouseover(this);};
+              document.getElementById("next").onmouseout = function(){btn_onmouseout(this);};
+              document.getElementById("next").onmousedown = function(){btn_onmousedown(this);};
+              document.getElementById("next").onmouseup = function(){btn_onmouseup(this);};
+        }
+
+        function btn_onmouseup(btn) {
+
+          if (pantalla_instruccion == 1 || pantalla_instruccion ==  total_instrucciones) 
+          {
+            sincambio("instruccion"+pantalla_instruccion);
+             inicio();
+          }
+
+          if (btn.id == "next" &&  pantalla_instruccion < total_instrucciones) {
+            oculta(pantalla_instruccion);
+            pantalla_instruccion = pantalla_instruccion +1;
+            muestra(pantalla_instruccion,"animate__animated animate__backInRight");
+             inicio();
+          }
+
+          if (btn.id == "back" && pantalla_instruccion > 1) {
+            oculta(pantalla_instruccion);
+            pantalla_instruccion = pantalla_instruccion - 1;
+            muestra(pantalla_instruccion,"animate__animated animate__backInLeft");
+             inicio();
+          }
+
+          if (btn.id == "reset") {
+            oculta(pantalla_instruccion);
+            pantalla_instruccion = 1;
+            muestra(pantalla_instruccion,"animate__animated animate__backInRight");
+             inicio();
+             reiniciar();
+          }
+
+          if (btn.id == "play") {
+            pantalla_instruccion = 1;
+            location.href='OVA.html';
+          }
+          if (btn.id == "home") {
+            pantalla_instruccion = 1;
+            location.href='Home.html';
+          }
+          if (btn.id == "back_page") {
+            pantalla_instruccion = 1;
+            location.href='Home.html';
+          }
+        }
+
+        function sincambio(pantalla){
+            var p = "instruccion"+pantalla;
+            var item = document.getElementById(pantalla);
+            item.className = 'animate__animated animate__tada';
+        }
+
+        function oculta(pantalla){
+            var p = "instruccion"+pantalla;
+            var i = "indicador"+pantalla;
+
+            var item = document.getElementById(p);
+            item.className = 'none';
+
+            var ind = document.getElementById(i);
+            ind.src = "assets/btn/indicador.png";
+        }
+
+        function muestra(pantalla,clase){
+            p = "instruccion"+pantalla;
+            i = "indicador"+pantalla;
+            var item = document.getElementById(p);
+            item.className = 'block '+ clase;
+            var ind = document.getElementById(i);
+            ind.src = "assets/btn/indicador_active.png";
+          }
+    </script>
+<style type="text/css">
+        p {
+          font-family: sans-serif;
+          font-size: 1.3vw;
+          font-weight: 500;
+          color: #000;
+        }
+
+        .contenedor{
+        align-content: center;
+        margin-top: 45px;            
+        background-color: white;
+        max-width: 100%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset; 
+        border-radius: 10px;
+        border:none;
+          min-height: 200px;    
+            }
+
+     .subtitulo_barra2{
+       height: 70px; 
+     width: 100%; 
+     background-color: #00B6ED; 
+    margin-top: 0;
+     text-align: center;
+    color:#fff;
+     
+    }
+
+      .myButton {
+                  box-shadow: 0px 10px 14px -7px #00B6ED;
+          background:linear-gradient(to bottom, #00B6ED 10%, #00B6ED 100%);
+             background-color:#599bb3;
+             border-radius:9px;
+             display:inline-block;
+             cursor:pointer;
+             color:#ffffff;
+          
+             font-size:20px;
+             font-weight:bold;
+             padding:13px 32px;
+             text-decoration:none;
+             text-shadow:0px 1px 0px #3d768a;
+                text-align: center;
+                    padding-top: 2vh;
+        
+           
+                }
+        .myButton:hover{
+               box-shadow: 0px 10px 14px -7px #276873;
+            background:linear-gradient(to bottom, #00EDC4 10%, #00EDC4 100%);
+                 background-color:rgb(0,237,196);
+           
+         }
+        .myButton:active {
+          position:relative;
+          top:1px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+          .titulo_barra{
+            margin-top: -1%;
+          }
+        }
+
+      
+        @media only screen and (max-width: 600px){
+          .myButton{
+            font-size:10px;
+          }
+
+          .animate__animated{
+            font-size: 26px;
+          }
+        }
+    </style>
+</head>
+<body style="background-image: url(assets/FONDO.png); background-size: cover;background-repeat: no-repeat; background-color: #FBFDFD" onload="inicio();">
+  <!--Botones top-->
+  <div class="col-md-12" style="position: relative;">
+      <img src="assets/btn/home.png" id="home" class="btn_top" style="right: 30px;" onmouseover="btn_onmouseover(this);" onmouseout="btn_onmouseout(this);" onmousedown="btn_onmousedown(this)" onmouseup="btn_onmouseup(this)">
+
+      <img src="assets/btn/back_page.png" id="back_page" class="btn_top" style="left: 30px;" onmouseover="btn_onmouseover(this);" onmouseout="btn_onmouseout(this);" onmousedown="btn_onmousedown(this)" onmouseup="btn_onmouseup(this)">
+  </div>
+
+        <!--Barra de Título -->
+	<div id="barra_titulo" class="titulo_barra">
+	   	<h1 class="titulo" style="margin-top: 0px;">HISTORIA</h1>
+	</div>
+        <!--Barra de Subtítulo -->
+	<div id="barra_subtitulo" class="subtitulo_barra">
+	   	<p class="subtitulo">Completar Palabra</p>
+	</div>
+    	<!--INGRESA AQUÍ EL CONTENIDO -->
+	<div class="row" >
+      
+      <!-- ============ INSTRUCCIÓN 1 ================== -->
+      <div id="instruccion1" class="animate__animated animate__backInDown" style="width: 100%; align-items: center;text-align: center; padding-top: 2%;">
+        <div class="col-12">
+          <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="align-items: center;text-align: center;">
+                <div class="contenedor">
+                  <div id="barra_subtitulo" class="subtitulo_barra" style="background-color: #7dd8cc;font-weight: bold; border-radius: 10px 10px 0 0;">
+                    <h2 class="animate__animated animate__backInDown" style="color:#fff;"> Instrucciones</h2>
+                  </div>
+                  <br>
+                  <p id="loco" style="font-size: 1.4vw;">Identidica las palabras que se encuentran de lado izquierdo de la pantalla y arrástrala al cuadro de texto correspondiente. </p>
+                </div>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"  > 
+                    <img class="img" src="assets/GIF-1.gif" style="width: 70%;align-items: center;file:///C:/Users/ari06/Documents/Axtic/OVAS/PALABRAS%20FULL/assets/calificar.giftext-align: center;" />                
+                      <br>
+              </div>
+          </div>   
+        </div>
+      </div>
+
+      <!-- ============ INSTRUCCIÓN 2 ================== -->
+      <div id="instruccion2" class="none" style="width: 100%; align-items: center;text-align: center; padding-top: 2%;">
+        <div class="col-12">
+          <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="align-items: center;text-align: center;">
+                <div class="contenedor">
+                  <div id="barra_subtitulo" class="subtitulo_barra" style="background-color: #7dd8cc;font-weight: bold; border-radius: 10px 10px 0 0;">
+                      <h2 class="animate__animated animate__backInDown" style="color:#fff;"> Instrucciones</h2>  
+                  </div>
+                  <br>
+                  <p>Puedes comenzar de nuevo al presionar el botón de "Limpiar".</p>
+                </div>
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"  > 
+                    <img class="img" src="assets/GIF-2.gif" style="width: 70%;align-items: center;text-align: center;" />                
+                      <br>
+              </div>
+          </div>   
+        </div>
+      </div>
+
+      <!-- ============ INSTRUCCIÓN 3 ================== -->
+      <div id="instruccion3" class="none" style="width: 100%; align-items: center;text-align: center; padding-top: 2%;">
+        <div class="col-12">
+          <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="align-items: center;text-align: center;">
+                <div class="contenedor">
+                  <div id="barra_subtitulo" class="subtitulo_barra" style="background-color: #7dd8cc;font-weight: bold; border-radius: 10px 10px 0 0;">
+                     <h2 class="animate__animated animate__backInDown" style="color:#fff;"> Instrucciones</h2>
+                  </div>
+                  <br>
+                  <p>Presiona el botón de "Evaluar" para conocer el resultado de la evaluación.</p>
+                  <br>
+                  <h3 style="font-weight: bold;">¡ÉXITO!</h3>
+                  <a href="OVA.html" class="myButton" style="text-decoration: none;">Comenzar</a>
+                   <br>
+                        <br>
+                </div>
+            
+
+              </div>
+              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"  > 
+                    <img class="img" src="assets/GIF-3.gif" style="width: 70%;align-items: center;text-align: center;" />          
+                      <br>
+              </div>
+          </div>   
+        </div>
+      </div>
+    </div>
+        
+ 
+
+   
+
+<!--Botones bottom -->
+      <div class="col-md-12" style="position: relative;">
+          <img src="assets/btn/reset.png" id="reset" class="btn" style="right: 50px;" onmouseover="btn_onmouseover(this);" onmouseout="btn_onmouseout(this);" onmousedown="btn_onmousedown(this)" onmouseup="btn_onmouseup(this)"  data-toggle="tooltip" title="Reiniciar">
+
+          <img src="assets/btn/next.png" id="next" class="btn" style="right: 105px;" onmouseover="btn_onmouseover(this);" onmouseout="btn_onmouseout(this);" onmousedown="btn_onmousedown(this)" onmouseup="btn_onmouseup(this)"  data-toggle="tooltip" title="Siguiente">
+
+          <img src="assets/btn/back.png" id="back" class="btn" style="right: 165px;" onmouseover="btn_onmouseover(this);" onmouseout="btn_onmouseout(this);" onmousedown="btn_onmousedown(this)" onmouseup="btn_onmouseup(this)"  data-toggle="tooltip" title="Anterior">
+
+          <img src="assets/btn/play.png" id="play" class="btn" style="right: 230px;" onmouseover="btn_onmouseover(this);" onmouseout="btn_onmouseout(this);" onmousedown="btn_onmousedown(this)" onmouseup="btn_onmouseup(this)"  data-toggle="tooltip" title="Comenzar">
+      </div>
+
+      <!--Indicadores -->
+      <div class="col-md-12" style="position: relative;">
+          <img src="assets/btn/indicador_active.png" id="indicador1" class="indicador" style="right: 52%;">
+          <img src="assets/btn/indicador.png" id="indicador2" class="indicador" style="right: 50%;">
+          <img src="assets/btn/indicador.png" id="indicador3" class="indicador" style="right: 48%;">
+      </div>
+
+       <script>
+                $(document).ready(function(){
+                  $('[data-toggle="tooltip"]').tooltip();   
+                });
+                </script>
+
+                
+</body>
+</html>

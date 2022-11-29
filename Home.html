@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>¡Bienvenido!</title>
+
+      <!--Bootstrap -->
+    <!--Bootstrap -->
+  <link rel="stylesheet" href="bootstrap/bootstrap3.4.1.css">
+    
+      <!--Estilos -->
+  <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style-texto.css">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    
+          <!--Botones -->
+  <link rel="stylesheet" href="css/boton3d.css">
+
+	<style type="text/css">
+        html, body{
+        display: flex;
+        flex-direction: column;
+        
+            
+        }
+                img {
+        	width: 100%;
+             height: 100%;
+             object-fit: contain;
+        }
+        
+        .img:hover{
+             -webkit-transform:  scale(1.3) rotate3d(1, 1, 1, 25deg); /* Chrome, Safari, Opera */
+            transform: scale(1.3) rotate3d(1, 1, 1, 25deg);
+        }
+        .padre 
+        {
+           padding-top: 3vh;
+           height:100%;
+           width: 100%;         
+           display:flex;
+           justify-content: center;
+           align-items: center;
+        }
+
+                .contenedor{
+        align-content: center;
+        margin-top: 45px;            
+        /*background-color: white;*/
+        max-width: 100%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset; 
+        border-radius: 10px;
+        border:none;
+              
+            }
+
+        .Alfabeto {
+            height:100%;
+            flex: 1; 
+            margin-left: -50px;
+        
+      
+        }
+       
+        
+        h3{
+            font-family:'sequel_sanssemi_bold_head';"
+            text-align:justify-all;
+        }
+               .myButton {
+                   box-shadow: 0px 10px 14px -7px #00B6ED;
+                   background:linear-gradient(to bottom, #00B6ED 10%, #00B6ED 100%);
+                   background-color:#599bb3;
+                   border-radius:9px;
+                   display:inline-block;
+                   cursor:pointer;
+                   color:#ffffff;
+                
+                   font-size:1.5em;
+                   font-weight:bolder;
+                   padding:13px 32px;
+                   text-decoration:none;
+                   text-shadow:0px 1px 0px #3d768a;
+                      text-align: center;
+                          padding-top: 2vh;
+           
+                }
+        .myButton:hover{
+               box-shadow: 0px 10px 14px -7px #276873;
+            background:linear-gradient(to bottom, #00EDC4 10%, #00EDC4 100%);
+                 background-color:rgb(0,237,196);
+           
+         }
+        .myButton:active {
+          position:relative;
+          top:1px;
+        }
+	</style>
+
+</head>
+<body style="position:relative; background-image: url(assets/FONDO.png); background-size: cover;background-repeat: no-repeat; background-color: #FBFDFD">
+ 
+    
+	<div id="barra_titulo" class="titulo_barra">
+	   	<h1 class="titulo">ESPAÑOL</h1>
+	</div>
+	<div id="barra_subtitulo" class="subtitulo_barra">
+
+        <div class="subtitulo">
+        Completar Palabra
+  </div>
+  
+</div>
+	</div>
+
+	<!--INGRESA AQUÍ EL CONTENIDO -->
+	<div class="row" style="position: relative;	margin-right:0% ">
+		<div style="margin-top: 20px;"></div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+
+            <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+             <div class="contenedor">
+                <div class="padre" style="margin-top: -10vh;" >                
+                        <div class="Alfabeto">
+                    <div class="contenedor-princi" style="margin-top: -2%;">
+                      <center><p class="animate__animated animate__backInDown" style="font-size: 1.8vw;color:#212529;font-weight: bold; padding-top: 2.7vw;">Utiliza tus habilidades de observación e indentificación para encontrar de manera correcta el enunciado.</p></center>
+                                          <div class="contenedor-princi-img" style="margin-top: -10%;">
+                                              <center><img src="assets/completar.png" style="width: 50%; "></center>
+                                          </div>
+                                          <div class="contenedor-princi-texto" style="margin-top: -10%;">
+                                              
+                                             <center><h3> ¡Aprende a completar palabras!  <br><br> Todo mundo necesita: <span class="typed" style="color:#00b6ed"></span></h3></center>
+                                            
+                                          </div>
+                                          <br>
+                                          <center><a href="Instrucciones.html" style="color: #fff; text-decoration: none;" class="myButton">Comenzar</a></center>
+                                       
+                                          <script src="./js/typed.js"></script>     
+                                         <script src="./js/main.js"></script>
+
+                                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+                                  
+                                          </div>
+                                          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+                                     
+                                              </div>
+                              </div>
+                          </div>
+                  </div>
+                </div>  
+            </div>
+
+        </div>
+		
+
+		<div class="col-md-12" style="position: relative;">
+			
+			<div class="col-md-12" style="position: relative; z-index: -1; top: -20px;">
+				
+			</div>
+		</div>
+	</div>
+	<!--FIN DEL CONTENIDO -->
+</body>
+</html>

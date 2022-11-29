@@ -1,0 +1,195 @@
+
+@import url("../fonts/SequelSans/stylesheet.css");
+
+p {
+  color: #ffffff;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+h5 {
+  color: #f1c40f;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-red {
+  min-width: 150px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgb(206, 23, 23);
+background: linear-gradient(90deg, rgb(221, 47, 47) 0%, rgb(187, 33, 33) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(139, 24, 24, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button-red::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid rgb(201, 35, 35);
+  box-shadow: 0 0 60px rgba(62, 70, 67, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button-red:hover, .button:focus {
+  color: #ffffff;
+  transform: translateY(-6px);
+}
+
+
+
+.button-red::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid rgb(163, 34, 34);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button-red:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+.button-green {
+  min-width: 150px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgb(16, 199, 77);
+background: linear-gradient(90deg, rgb(82, 203, 55) 0%, rgb(58, 187, 33) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 10px 1px 12px rgba(51, 201, 64, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button-green::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid rgb(82, 203, 55);
+  box-shadow: 0 0 10px rgba(62, 70, 67, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button-green:hover, .button:focus {
+  color: #ffffff;
+  transform: translateY(-6px);
+}
+
+
+
+.button-green::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid rgb(34, 163, 51);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+
+.button-green:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+
+
+@keyframes ring {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    height: 100px;
+    opacity: 0;
+  }
+}

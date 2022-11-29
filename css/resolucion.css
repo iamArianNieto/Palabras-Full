@@ -1,0 +1,442 @@
+
+
+
+ .modal-content{
+        margin-top: 50%;
+        border: solid 1px;
+        border-radius: 15px;
+        border-color: rgb(0,153,230);
+        color: rgb(0,57,77);
+    }
+
+
+    body{
+       
+    }
+
+
+      .preguntanum{
+          
+          background-color: red;
+          color: white;
+      }
+
+       .contenedor{
+        align-content: center;
+        margin-top: 45px;      
+        background-color: white;      
+        /*background-image: url(../assets/mujer.jpg);*/
+        
+        background-attachment: scroll;
+        background-repeat: no-repeat; 
+        background-size: 55%;
+        background-position:right bottom;
+        max-width: 120%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset; 
+        border-radius: 10px;
+        border:none;
+              
+
+            }
+
+        
+
+    .contenedor3{
+        align-content: center;
+        margin-top: 45px;            
+        background-color: white;
+        max-width: 140%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset; 
+        border-radius: 10px;
+        border:none;
+              
+            }
+
+
+      .titulo_res
+      {
+        background-color: rgb(0,153,230); font-weight: bold; border-radius: 10px 10px 0 0; margin-top: -15%;
+      }
+
+      .div_res{
+          min-height: 575px; width: 346px; border:solid 1px; border-color: rgb(0,153,230); 
+      }
+
+
+      .titulo_pregunta{
+        background-color: rgb(113,100,247);font-weight: bold; border-radius: 10px 10px 0 0; margin-top: -7%;
+      }
+
+      .div_pregunta{
+        min-height: 575px; width:920px; border:solid 1px; border-color: rgb(113,100,247); 
+      }
+
+
+    .contenedor2{
+        
+         align-content: center;
+        text-align: center;
+         width: 100%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+    }
+   
+
+   
+    .subtitulo_barra2{
+       height: 70px; 
+     width: 100%; 
+     background-color: #00B6ED; 
+     z-index: 1; 
+     text-align: center;
+    top: 100px;
+     
+    }
+     .subtitulo_barra3{
+       height: auto; 
+     width: 98%; 
+     background-color: rgb(0,153,230); 
+     z-index: 1; 
+     text-align: center;
+        top: 100px;
+         margin-left: auto;
+         margin-right: auto;
+         border-radius: 0px 0px 10px 10px;
+    }
+    .padre {
+        height: 66px;
+        width: 100%;
+        color: #fff;
+        /* IMPORTANTE */
+        display: flex;
+        align-items: center;
+          justify-content: center;
+        border-radius: 5px;
+        
+        }
+    .hijo {
+        font-size: 1.3vw;
+        width:100%; 
+    }
+    .padre2 {
+        height: 66px;
+        width: 100%;
+        
+        /* IMPORTANTE */
+        display: flex;
+        align-items: center;
+          justify-content: center;
+        border-radius: 5px;
+        
+        }
+    .hijo2 {
+        font-size: 1.3vw;
+        width:100%; 
+    }
+   
+   .padre3 {
+          width: 100%;   
+        /* IMPORTANTE */
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        padding: 0 1rem;
+        margin: 1rem;
+}
+
+
+    .resultados{
+
+         height: 80px;
+        width: 100%;
+         display: flex;
+        align-items: center;
+        justify-content: top;
+    }
+   
+    .myButton {
+	box-shadow:inset -2px 2px 8px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:8px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+   outline-color: transparent; 
+    outline-style: none;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+   outline-color: transparent; 
+    outline-style: none;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+   outline-color: transparent; 
+    outline-style: none;
+}
+
+.myButton:after{
+   outline-color: transparent; 
+    outline-style: none;
+}
+
+.myButton:focus{
+ 
+}
+
+ .myButton2 {
+    background-color: #87D36C;
+    border-radius: 9px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    border: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 22px;
+    text-align: center;
+    padding-top: 2vh;
+     outline-color: transparent; 
+    outline-style: none;
+}
+
+.myButton2:hover {
+  background:linear-gradient(to bottom, #97E969 5%, #97E969 100%);
+  background-color:#dfdfdf;
+   outline-color: transparent; 
+    outline-style: none;
+}
+.myButton2:active {
+  position:relative;
+  top:1px;
+   outline-color: transparent; 
+    outline-style: none;
+}
+
+.myButton2:after{
+   outline-color: transparent; 
+    outline-style: none;
+}
+
+.myButton2:focus{
+  
+}
+
+.myButton3 {
+    background-color:rgb(0,182,237);
+    border-radius: 9px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    border: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 22px;
+    text-align: center;
+    padding-top: 2vh;
+     outline-color: transparent; 
+    outline-style: none;
+}
+
+.myButton3:hover {
+  background:linear-gradient(to bottom, #00E0EE 5%, #00E0EE 100%);
+  background-color:#dfdfdf;
+   outline-color: transparent; 
+    outline-style: none;
+}
+.myButton3:active {
+  position:relative;
+  top:1px;
+   outline-color: transparent; 
+    outline-style: none;
+}    
+ 
+.myButton3:after{
+   outline-color: transparent; 
+    outline-style: none;
+}
+
+.myButton3:focus{
+  
+}
+
+.preguntas{
+  margin-left:-10%; font-weight: bold;
+}
+
+.contenedor_preguntas{
+  margin-left:-10%;
+  width: 30%;
+}
+
+.respuestas_json{
+	margin-left: 25%;
+}
+
+     /* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+.column {
+  height: 30px;
+  width: 160px;
+  float: left;
+  border: 0px;
+  background-color: rgb(0, 153, 230);
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.8vh;
+    font-family:'sequel_sanslight_head';
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; 
+  text-align: center;
+  cursor: move;
+  outline-color: transparent; 
+    outline-style: none;
+}
+
+.column:hover{
+	background-color: #00edc4;
+  outline-color: transparent; 
+    outline-style: none;
+}
+
+
+.column:active{
+   outline-color: transparent; 
+    outline-style: none;
+}
+
+.column:focus{
+  outline-color: transparent; 
+    outline-style: none;
+}
+
+.column header {
+  color: #fff;
+  text-shadow: #000 0 1px;
+  box-shadow: 5px;
+  padding: 5px;
+   background: -moz-linear-gradient(left center, rgb(255,255,255), rgb(79,79,79), rgb(21,21,21));
+  background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(255,255,255)),
+                               color-stop(0.50, rgb(79,79,79)),
+                               color-stop(1, rgb(21,21,21)));
+  background: -webkit-linear-gradient(left center, rgb(255,255,255), rgb(79,79,79), rgb(21,21,21));
+  background: -ms-linear-gradient(left center, rgb(255,255,255), rgb(79,79,79), rgb(21,21,21));
+  border-bottom: double;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -ms-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px; 
+  outline-color: transparent; 
+    outline-style: none;
+
+}
+
+#draggable {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: white;
+  }
+
+  .dropzone {
+    width: 165px;
+    height: 35px;
+    background: white;
+    border: solid 1px;
+  border-color: rgb(0,237,196);    
+    margin-bottom: 5px;
+    padding: 1px;
+border-radius: 10px;
+padding-right: 101%;
+}
+
+h5{
+        background-color: rgb(151,233,105);
+        border-radius: 50px;
+        width: 3rem;
+        height: 3rem;
+        color:#fff;
+        padding:7px;
+        font-weight: bold;
+    }
+
+.scrollbar-primary{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 300px;
+}
+
+
+
+.scrollbar-primary::-webkit-scrollbar {
+width: 5px;
+background-color: #F5F5F5; }
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+background-color: rgba(115, 101, 248,.5); }
+
+
+.scrollbar-primary2{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 500px;
+}
+
+
+
+.scrollbar-primary2::-webkit-scrollbar {
+width: 5px;
+background-color: #0099e6; }
+
+.scrollbar-primary2::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px #0099e6;
+background-color: #0099e6; }
+
+ button{
+
+  outline: none;
+ }
+
+button:focus {
+  outline-color: transparent; 
+    outline-style: none;
+}

@@ -1,0 +1,208 @@
+@import url("../../fonts/SequelSans/stylesheet.css");
+body {
+    background-color: #D5E5EC;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'sequel_sanslight_head';
+}
+
+h1 {
+    font-family: 'sequel_sanssemi_bold_head';
+}
+
+h2 {
+    font-family: 'sequel_sanssemi_bold_head';
+}
+
+h3 {
+    font-family: 'sequel_sanssemi_bold_head';
+}
+
+h4 {
+    font-family: 'sequel_sanssemi_bold_head';
+}
+
+h5 {
+    font-family: 'sequel_sanssemi_bold_head';
+}
+
+h6 {
+    font-family: 'sequel_sanssemi_bold_head';
+}
+
+p {
+    font-family: 'sequel_sanslight_head';
+}
+
+.btn {
+    width: 70px;
+    height: auto;
+    position: fixed;
+    display: inline;
+    bottom: 40px;
+    transition: all 300ms ease 0ms;
+    z-index: 999;
+}
+
+.btn_top {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    display: inline;
+    top: 20px;
+    transition: all 300ms ease 0ms;
+    z-index: 99;
+}
+
+.indicador {
+    height: auto;
+    position: fixed;
+    display: inline;
+    bottom: 30px;
+    transition: all 300ms ease 0ms;
+    z-index: 99;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.myButton {
+    background:linear-gradient(to bottom, #87D36C , #87D36C );
+    background-color:#87D36C;
+    border-radius:6px;
+    border:0px ;
+    display:inline-block;
+    width: 90%;
+    text-align: center;
+    
+    color:#ffffff;
+    font-family:Arial;
+    font-size:19px;
+    padding:2px 50px;
+    text-decoration:none;
+}
+
+.myButton:hover {
+    background:linear-gradient(to bottom, #97E969 , #97E969 );
+    background-color:#97E969;
+    color:#ffffff;
+}
+
+.myButtonaqua {
+    background:linear-gradient(to bottom, #5481fd , #5481fd );
+    background-color:#5481fd;
+    border-radius:6px;
+    border:0px ;
+    display:inline-block;
+    width: 90%;
+    text-align: center;
+    
+    color:#ffffff;
+    font-family:Arial;
+    font-size:19px;
+    padding:2px 50px;
+    text-decoration:none;
+}
+
+.myButtonaqua:hover {
+    background:linear-gradient(to bottom, #7164f7 , #7164f7 );
+    background-color:#7164f7;
+    color:#ffffff;
+}
+
+
+.myButtonblue {
+    background:linear-gradient(to bottom, #0099E6 , #0099E6);
+    background-color:#0099E6;
+    border-radius:6px;
+    border:0px ;
+    display:inline-block;
+    width: 90%;
+    text-align: center;
+    
+    color:#ffffff;
+    font-family:Arial;
+    font-size:19px;
+    padding:2px 50px;
+    text-decoration:none;
+}
+
+.myButtonblue:hover {
+    background:linear-gradient(to bottom, #00B6ED 5%, #00B6ED 100%);
+    background-color:#00B6ED;
+    color:#ffffff;
+}
+
+.myButton {
+          box-shadow: 0px 10px 14px -7px #00B6ED;
+          background:linear-gradient(to bottom, #00B6ED 10%, #00B6ED 100%);
+             background-color:#599bb3;
+             border-radius:9px;
+             display:inline-block;
+             cursor:pointer;
+             color:#ffffff;
+          
+             font-size:20px;
+             font-weight:bold;
+             padding:13px 32px;
+             text-decoration:none;
+             text-shadow:0px 1px 0px #3d768a;
+                text-align: center;
+                    padding-top: 2vh;
+        }
+        .myButton:hover {
+         box-shadow: 0px 10px 14px -7px #276873;
+        background:linear-gradient(to bottom, #00EDC4 10%, #00EDC4 100%);
+                 background-color:rgb(0,237,196);
+           
+         color:#fff;
+        }
+        .myButton:active {
+          position:relative;
+          top:1px;
+        }
+
+.titulo_barra {
+    height: 85px;
+    width: 100%;
+    background-color: #00374D;
+    color: #FFF;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.subtitulo_barra {
+    height: 40px;
+    width: 100%;
+    background-color: #00B6ED;
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+    top: 85px;
+    justify-content: center;
+    z-index: 10;
+}
+
+.titulo {
+    font-family: 'sequel_sanssemi_bold_head';
+    font-size: 50px;
+}
+
+.subtitulo {
+    font-family: 'sequel_sanslight_head';
+    z-index: 100;
+    color: #FFF;
+    font-size: 30px;
+}
+
+.ova {
+    top: 125px;
+}

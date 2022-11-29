@@ -1,0 +1,98 @@
+/**
+* Wordfind.js 0.0.1
+* (c) 2012 Bill, BunKat LLC.
+* Wordfind is freely distributable under the MIT license.
+* For all details and documentation:
+*     http://github.com/bunkat/wordfind
+*/
+
+
+/**
+* Styles for the puzzle
+*/
+#juego {
+  border: 1px solid black;
+  padding: 20px;
+  float: left;
+  margin: 30px 20px;
+}
+
+#juego div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* style for each square in the puzzle */
+#juego .puzzleSquare {
+  height: 30px;
+  width: 30px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0;
+  font: 0.9em sans-serif;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* indicates when a square has been selected */
+#juego .selected {
+  background-color: #00B6ED;
+}
+
+/* indicates that the square is part of a word that has been found */ 
+#juego .found {
+  background-color: #b281f2;
+  color: white;
+   border-radius: 4px;
+}
+
+#juego .solved {
+  background-color: #00374D;
+  color: white;
+     border-radius: 4px;
+}
+
+/* indicates that all words have been found */
+#juego .complete {
+  background-color: green;
+}
+
+
+#Palabras {
+        padding-top: 25px;
+    width: auto;
+   
+}
+#Palabras ul {
+  list-style-type: none;
+}
+
+#Palabras li {
+    margin-left: auto;
+    margin-right: auto;
+  padding: 4px 0;
+  font: 1.0em sans-serif;
+background-color:#7dd8ce; 
+    border-radius: 10px;
+    margin-bottom: 7px;
+   width: 70%;
+}
+
+#Palabras li:hover {
+  
+background-color:#b0d167; 
+    
+   
+}
+
+
+/* indicates that the word has been found */
+#Palabras .wordFound {
+  text-decoration: line-through;
+  color: gray;
+   background-color: #88bdc0;
+    border-radius: 10px;
+    
+}

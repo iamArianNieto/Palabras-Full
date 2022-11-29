@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+   	<meta charset="UTF-8">
+	<title>¡Completar Palabras¡</title>
+
+    <!-- Jquery -->
+    <!--Bootstrap -->
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="bootstrap/css/bootstrap2.min.css">
+
+   <!--Estilos -->
+   <link rel="stylesheet" type="text/css" href="css/styleSopa.css"/> 
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/animate.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+
+    <script src="bootstrap/3.4.1/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="bootstrap/js/jquery2.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap2.min.js"></script> 
+    
+
+
+    <script src="bootstrap/bootstrap2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/modal/bootstrap.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
+    <script type="text/javascript" src="js/json.json"></script>
+    <script type="text/javascript" src="js/palabras.js"></script>
+
+  
+   <link rel="stylesheet" href="css/resolucion.css">
+   <link rel="stylesheet" href="css/vistas.css">
+
+
+<script type="text/javascript">
+      
+    </script>
+
+  <style type="text/css">
+    
+  </style>
+
+<body onload="inicio();" style="position:relative; background-image: url(assets/FONDO.png); background-size: cover;background-repeat: no-repeat; background-color: #FBFDFD">
+
+
+
+
+
+
+
+
+	<!--Barra de Título -->
+    <div id="barra_titulo" class="titulo_barra">
+        <h1 class="titulo" style="margin-top: 0px;">ESPAÑOL</h1>
+    </div>
+    <!--Barra de Subtítulo -->
+	<div id="barra_subtitulo" class="subtitulo_barra">        
+        <p class="subtitulo" style="">Completar Palabra</p>
+ </div>
+
+
+ <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+            <div class="contenedor3 " style="min-height: 560px; ">
+                <div id="barra_subtitulo" class="subtitulo_barra" style="background-color: rgb(0,153,230); font-weight: bold; border-radius: 10px 10px 0 0;">        
+                   <p class="subtitulo"">Respuestas</p>                     
+                </div>   
+                <br><br>
+                <div id='divrespuesta' class="scrollbar-primary2" style="align-content:center;text-align: center; z-index: 1; "></div>
+                
+            </div>
+        </div>
+       
+         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 " >
+             <div class="contenedor " >
+<div id='damita' style="background-image: url(assets/mujer3.jpg);background-size: 35%;background-position: bottom right;background-repeat: no-repeat;">
+
+                 <div id="barra_subtitulo" class="subtitulo_barra" style="background-color: rgb(113,100,247);font-weight: bold; border-radius: 10px 10px 0 0;">        
+                 <p class="subtitulo">Preguntas</p>                     
+                </div>   
+                
+                    <div class="row scrollbar-primary" style="min-height: 520px;width: 101.5%; z-index: 100;">
+                    
+                      <div class="col-lg-12 col-md-12 col-sm-12 row ">
+                      <br><br>
+                        <center><div id="preguntas" class=""></div></center>
+                         <!--<img src="assets/mujer.jpg" style="z-index: 10; width: 50%"> -->
+                      </div>
+                    </div>
+                
+                        
+                     
+                
+         </div>
+        </div>
+    </div>
+
+  
+
+
+
+      <div class="contenedor2" style="font-weight: bold;padding-bottom: 0px;">
+            <div class="row"  style="padding-bottom: 0px; height: 80px;">
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-bottom: 0px;">
+                      <div class="row" >
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                              <div class="padre" >
+                                 <div class="hijo">
+                                    <button type="button" class="myButton2" style="width: 50%" id="btnCalificar" onclick="calificar();">Resultado</button>
+                                       <center>
+              
+                                 </div>
+                              </div>
+                              
+                          </div>
+                      </div>    
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-bottom: 0px;">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+                        <div class="padre" >
+                          <div class="hijo">
+                                   <button type="button" class="myButton3"  style="width: 50%" id="btnRecetear" onclick="inicio();">Limpiar</button>
+                          </div>
+                        </div>
+                      </div>                    
+                    </div>
+                  </div>
+              </div>
+        </div>
+
+
+
+                       <div class="contenedor2" style="max-height: 1px;">
+        <div class="col-lg-12 col-md-12 col-sm-12 row">
+          <div id="divrespuesta" ></div>
+          <input type='hidden' id='auxrespuesta' value=''>
+        </div>
+      </div>
+			
+   
+    </div>
+
+	</div>
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+     
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-weight: bold;">Resultados</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <br>
+          <center><img src="" alt="" id="procentaje" width="20%" style="font-size: 1.4vw; color: black"></center>
+          <br>
+          <br>
+         
+         
+          <center><p id="calificacion" style="color: black;"></p></center>
+          
+          
+        </div>
+        <div class="modal-footer" style="margin-left: auto;margin-right: auto;">
+          
+          <button type="button" class="myButton3" data-dismiss="modal" style="border: 0px;">Aceptar</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+</body>
+
+
+</html>
